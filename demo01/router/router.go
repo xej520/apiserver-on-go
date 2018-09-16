@@ -27,6 +27,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	// The health check handlers
 	// sd 分组主要用来检查 API Server 的状态：
 	//健康状况、服务器硬盘、CPU 和内存使用量
+	// 路由分组
 	svcd := g.Group("/sd")
 	{
 		svcd.GET("/health", sd.HealthCheck)

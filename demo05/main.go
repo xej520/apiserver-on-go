@@ -38,7 +38,7 @@ func main() {
 				"debug":    "failed---failed",
 				"filename": "main",
 			})
-			time.Sleep(100 * time.Millisecond)
+			time.Sleep(10 * time.Second)
 		}
 	}()
 

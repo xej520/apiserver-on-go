@@ -13,6 +13,7 @@ import (
 	"xingej-go/Apiserver-go/demo07/router"
 	"github.com/lexkong/log/lager"
 	"xingej-go/Apiserver-go/demo07/model"
+	"xingej-go/Apiserver-go/demo07/router/middleware"
 )
 
 var (
@@ -48,7 +49,7 @@ func main() {
 	// Create the Gin engine.
 	g := gin.New()
 
-	middlewares := []gin.HandlerFunc{}
+	//middlewares := []gin.HandlerFunc{}
 
 	// Routes.
 	router.Load(
@@ -56,7 +57,8 @@ func main() {
 		g,
 
 		// Middlwares.
-		middlewares...,
+		middleware.Logging(),
+		middleware.RequestId(),
 	)
 
 	// Ping the server to make sure the router is working.

@@ -37,7 +37,8 @@
         - 查询指定用户的信息
     - 数据库的 CURD 操作
 - demo08  ---> HTTP 调用添加自定义处理逻辑
-    - 
+    - 介绍 gin middleware 基本用法
+    - 介绍如何用 gin middleware 特性给 API 添加唯一请求 ID 和记录请求信息
 - demo09  ---> API 身份验证
     - 
 - demo10  ---> 用 HTTPS 加密 API 请求
